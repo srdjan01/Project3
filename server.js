@@ -56,6 +56,11 @@ app.get("/trainerCreate", function(req, res) {
     res.sendFile(path.join(__dirname, "./trainerCreate.html"));
 });
 
+app.get("/userSubmit", function(req, res) {
+    res.sendFile(path.join(__dirname, "./userSubmit.html"));
+});
+
+
 app.listen(PORT, function() {
     console.log("App now listening at localhost:" + PORT);
 });
