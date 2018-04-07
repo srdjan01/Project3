@@ -60,6 +60,9 @@ app.get("/userSubmit", function(req, res) {
     res.sendFile(path.join(__dirname, "./userSubmit.html"));
 });
 
+app.get("/trainerSubmit", function(req, res) {
+    res.sendFile(path.join(__dirname, "./trainerSubmit.html"));
+});
 
 app.listen(PORT, function() {
     console.log("App now listening at localhost:" + PORT);
