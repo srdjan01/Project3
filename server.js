@@ -24,8 +24,6 @@ app.engine("handlebars", exphbs({ defaultLayout: "test" }));
 app.set("view engine", "handlebars");
 
 
-
-
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "./test.html"));
 });
@@ -59,3 +57,10 @@ app.get("/trainerCreate", function(req, res) {
 app.listen(PORT, function() {
     console.log("App now listening at localhost:" + PORT);
 });
+
+
+
+
+
+
+

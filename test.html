@@ -17,7 +17,7 @@
     }
 
     #logo {
-        max-width: 300px;
+        max-width: 330px;
     }
 
     #title {
@@ -63,7 +63,7 @@
 </head>
 
 <body>
-    <!-- Dropdown Structure -->
+
     <ul id="dropdown1" class="dropdown-content">
         <li><a href="#!">one</a></li>
         <li><a href="#!">two</a></li>
@@ -72,23 +72,26 @@
     </ul>
     <nav>
         <div class="nav-wrapper">
-            <a href="test.html" class="brand-logo left"><img class="responsive-img" id="logo" src="images/1080PTSmall2.png"</a>
+            <a href="/test" class="brand-logo left"><img class="responsive-img" id="logo" src="images/1080PTSmall2.png"</a>
             <ul class="right hide-on-med-and-down">
-
-                <li><a href="contactUs.html">Contact</a></li>
-
-                <li><a href="aboutUs.html">About Us</a></li>
+                <li><a href="/contactUs">Contact</a></li>
+                <li><a href="/aboutUs">About Us</a></li>
+                
                 <!-- Dropdown Trigger -->
-
                 <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Login<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </nav>
-    <!-- 
-    <div>
-        <h1 id="title">1080 PT</h1>
-    </div>
-    <div>
+
+    <script>
+
+    $(document).ready(function() {
+        $('.dropdown-button').dropdown({
+            hover: true
+        });
+    });
+    </script>
+    <!--     <div>
         
         <ul>
             <li id="button1"> <a href="/login" class="waves-effect waves-light btn cyan accent-3 click-to-toggle"><i class="material-icons left">account_circle
