@@ -5,11 +5,12 @@
     <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <title>1080 PT</title>
-    <style type="text/css">
+    <style>
     body {
         background-image: url("https://www.rd.com/wp-content/uploads/2016/06/Personal_Trainer_1.jpg");
         background-repeat: no-repeat;
@@ -19,105 +20,39 @@
     #logo {
         max-width: 330px;
     }
-
-    #title {
-        margin-top: 0px;
-        text-align: center;
-    }
-
-    #button1 {
-        position: absolute;
-        top: 10px;
-    }
-
-    #button2 {
-        position: absolute;
-        top: 50px;
-    }
-
-    #button3 {
-        position: absolute;
-        top: 90px;
-    }
-
-    #button4 {
-        position: absolute;
-        top: 130px;
-    }
-
-    #button5 {
-        position: absolute;
-        top: 170px;
-    }
-
-    #button6 {
-        margin-left: 80%;
-        margin-top: -82px;
-    }
-
-    #button7 {
-        margin-left: 80%;
-        margin-top: 10px;
-    }
     </style>
 </head>
 
 <body>
-
+    <!-- Dropdown Structure -->
     <ul id="dropdown1" class="dropdown-content">
-        <li><a href="#!">one</a></li>
-        <li><a href="#!">two</a></li>
+        <li><a href="#!">User Login</a></li>
         <li class="divider"></li>
-        <li><a href="#!">three</a></li>
+        <li><a href="#!">Trainer Login</a></li>
+        <li class="divider"></li>
+        <li><a href="#!">Blank</a></li>
     </ul>
     <nav>
         <div class="nav-wrapper">
-            <a href="/test" class="brand-logo left"><img class="responsive-img" id="logo" src="images/1080PTSmall2.png"</a>
+            <a href="#!" class="brand-logo"> <img class="responsive-img" id="logo" src="images/1080PTSmall2.png"> </a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="/contactUs">Contact</a></li>
                 <li><a href="/aboutUs">About Us</a></li>
-                
                 <!-- Dropdown Trigger -->
-                <li><a class="dropdown-trigger" href="#!" data-target="dropdown1">Login<i class="material-icons right">arrow_drop_down</i></a></li>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Login<i class="material-icons right">arrow_drop_down</i></a></li>
             </ul>
         </div>
     </nav>
-
     <script>
-
-    $(document).ready(function() {
-        $('.dropdown-button').dropdown({
-            hover: true
-        });
-    });
+    $(document).ready(function) {
+        $(".dropdown-button").dropdown({ hover: true });
+    }
     </script>
-    <!--     <div>
-        
-        <ul>
-            <li id="button1"> <a href="/login" class="waves-effect waves-light btn cyan accent-3 click-to-toggle"><i class="material-icons left">account_circle
-            </i>Login</a></li>
-            </a>
-            <li id="button2"><a href="/create" class="waves-effect waves-light btn cyan accent-3"><i class="material-icons left">create
-            </i>Create Account</a></li>
-            <li id="button3"><a href="/aboutUs" class="waves-effect waves-light btn cyan accent-3"><i class="material-icons left">announcement
-            </i>About 1080</a></li>
-            <li id="button4"><a href="/contactUs" class="waves-effect waves-light btn cyan accent-3"><i class="material-icons left">call
-            </i>Contact Us</a></li>
-            
-           
-        </ul>
-    </div>
-<div>
-    <ul>
-     <li id="button6"><a href="/trainerLogin" class="waves-effect waves-light btn cyan accent-3"><i class="material-icons left">account_circle
-            </i>Trainer Login</a></li>
-            
-             <li id="button7"><a href="/trainerCreate" class="waves-effect waves-light btn cyan accent-3"><i class="material-icons left">create
-            </i>Trainer Create Account</a></li>
-        </ul>
-</div> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js">
-    </script>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
 </body>
 
 </html>
