@@ -34,14 +34,22 @@
     .confirmation-tabs-btn {
         position: absolute;
     }
+
+    #logo {
+        max-width: 250px;
+        display: block;
+        margin: 0 auto;
+        width: 90%;
+    }
     </style>
 </head>
 
 <body>
-  <ul>
-<li id="button5"><a href="/" class="waves-effect waves-light btn cyan accent-3"><i class="material-icons left">home
+    <ul>
+        <li id="button5"><a href="/" class="waves-effect waves-light btn cyan accent-3"><i class="material-icons left">home
             </i></a></li>
-        </ul>
+    </ul>
+    <a href="#!" class="brand-logo"> <img class="responsive-img" id="logo" src="images/1080LogoColor.png"> </a>
     <div class="container white z-depth-2">
         <ul class="tabs light cyan accent-3">
             <li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
@@ -62,7 +70,7 @@
                             <input id="password" type="password" class="validate">
                             <label for="password">Password</label>
                         </div>
-                    </div>  
+                    </div>
                     <br>
                     <center>
                         <button class="btn waves-effect waves-light cyan accent-3" type="submit" name="action">Connect</button>
