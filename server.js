@@ -46,6 +46,14 @@ app.get("/aboutUs", function(req, res) {
     res.sendFile(path.join(__dirname, "./aboutUs.html"));
 });
 
+app.get("/userSubmit", function(req, res) {
+    res.sendFile(path.join(__dirname, "./userSubmit.html"));
+});
+
+app.get("/trainerSubmit", function(req, res) {
+    res.sendFile(path.join(__dirname, "./trainerSubmit.html"));
+});
+
 app.use(express.static('images'));
 
 // app.get("/trainerLogin", function(req, res) {
