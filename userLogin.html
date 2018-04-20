@@ -45,12 +45,28 @@
     <div class="container white z-depth-2">
         <ul class="tabs light cyan accent-3">
             <li class="tab col s3"><a class="white-text active" href="#login">login</a></li>
-            <li class="tab col s3"><a class="white-text" href="#register">register</a></li>
+            <!-- <li class="tab col s3"><a class="white-text" href="#register">register</a></li> -->
         </ul>
         <div id="login" class="col s12">
             <form class="col s12">
                 <div class="form-container">
                     <h3 class="cyan-text">Hello</h3>
+                    <!-- <div class="row">
+                        <div class="input-field col s12">
+                            <input id="email" type="email" class="validate">
+                            <label for="email">Email</label>
+                        </div>
+                    </div> -->
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">First Name</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input id="last_name" type="text" class="validate">
+                            <label for="last_name">Last Name</label>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="input-field col s12">
                             <input id="email" type="email" class="validate">
@@ -59,25 +75,37 @@
                     </div>
                     <div class="row">
                         <div class="input-field col s12">
+                            <input id="email-confirm" type="number" class="validate">
+                            <label for="email-confirm">Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="password" type="password" class="validate">
+                            <label for="password">Zip Code</label>
+                        </div>
+                    </div>
+                   <!--  <div class="row">
+                        <div class="input-field col s12">
                             <input id="password" type="password" class="validate">
                             <label for="password">Password</label>
                         </div>
-                    </div>   
+                    </div> -->   
                     <br>
                     <center>
-                        <button class="btn waves-effect waves-light cyan accent-3" type="submit" name="action">Connect</button>
+                        <button class="btn waves-effect waves-light cyan accent-3"  type="submit" name="action"><a href="/userSubmit">Connect</button>
                         <br>
                         <br>
-                        <a href="">Forgotten password?</a>
+                        <!-- <a href="">Forgotten password?</a> -->
                     </center>
                 </div>
             </form>
         </div>
-        <div id="register" class="col s12">
+        <!-- <div id="register" class="col s12">
             <form class="col s12">
                 <div class="form-container">
-                    <h3 class="cyan-text">Welcome</h3>
-                    <div class="row">
+                    <h3 class="cyan-text">Welcome</h3> -->
+                    <!-- <div class="row">
                         <div class="input-field col s6">
                             <input id="last_name" type="text" class="validate">
                             <label for="last_name">First Name</label>
@@ -114,7 +142,7 @@
                     <center>
                         <button class="btn waves-effect waves-light btn cyan accent-3" type="submit" name="action">Submit</button>
                     </center>
-                </div>
+                </div> -->
             </form>
         </div>
     </div>
