@@ -1,3 +1,4 @@
+
 var request = require("request");
 
 var express = require("express");
@@ -10,15 +11,11 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
-// Requiring our models for syncing
-var db = require("./models");
-
 app.use(express.static("public"));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(bodyParser.json());
-
 
 var exphbs = require("express-handlebars");
 
@@ -33,8 +30,8 @@ app.get("/", function(req, res) {
 
 
 app.get("/userLogin", function(req, res) {
-
-    res.sendFile(path.join(__dirname, "./userLogin.html"));
+   
+   res.sendFile(path.join(__dirname, "./userLogin.html"));
 });
 
 app.get("/trainerLogin", function(req, res) {
@@ -59,14 +56,6 @@ app.get("/trainerSubmit", function(req, res) {
 
 app.use(express.static('images'));
 
-
-// Routes
-// =============================================================
-require("./routes/api-routes.js")(app);
-require("./routes/html-routes.js")(app);
-
-
-
 // app.get("/trainerLogin", function(req, res) {
 //     res.sendFile(path.join(__dirname, "./trainerLogin.html"));
 // });
@@ -75,13 +64,13 @@ require("./routes/html-routes.js")(app);
 //     res.sendFile(path.join(__dirname, "./trainerCreate.html"));
 // });
 
-
-
-// Syncing our sequelize models and then starting our Express app
-// =============================================================
-db.sequelize.sync({ force: true }).then(function() {
-
-    app.listen(PORT, function() {
-        console.log("App now listening at localhost:" + PORT);
-    });
+app.listen(PORT, function() {
+    console.log("App now listening at localhost:" + PORT);
 });
+
+
+
+
+
+
+
