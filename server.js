@@ -1,20 +1,31 @@
 // Requiring our models for syncing //added this to server
-// var db = require("./models");  
+var db = require("./models");  
 
+// *** Dependencies
+// =============================================================
 var request = require("request");
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var path = require("path");
-var app = express();
 
+// Sets up the Express App
+// =============================================================
+var app = express();
 var PORT = process.env.PORT || 3000;
-var app = express();
 
+
+// Requiring our models for syncing
+var db = require("./models");
+
+// Static directory
 app.use(express.static("public"));
 
-app.use(bodyParser.urlencoded({ extended: false }));
+// Sets up the Express app to handle data parsing
 
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+// parse application/json
 app.use(bodyParser.json());
 
 var exphbs = require("express-handlebars");
@@ -56,17 +67,16 @@ app.get("/trainerSubmit", function(req, res) {
 
 app.use(express.static('images'));
 
-
-require("./routes/api-routes.js")(app);       //////added these to server.js
+// Routes
+// =============================================================
+require("./routes/api-routes.js")(app);       
 require("./routes/html-routes.js")(app);
+
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: true }).then(function() {
-
-
-
     app.listen(PORT, function() {
-        console.log("App now listening at localhost:" + PORT);
+        console.log("App now listening on PORT:" + PORT);
     });
 });
 
