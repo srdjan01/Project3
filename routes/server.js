@@ -1,5 +1,3 @@
-// Requiring our models for syncing //added this to server
-var db = require("./models");  
 
 // *** Dependencies
 // =============================================================
@@ -38,7 +36,6 @@ app.set("view engine", "handlebars");
 app.get("/", function(req, res) {
     res.sendFile(path.join(__dirname, "./home.html"));
 });
-
 
 app.get("/userLogin", function(req, res) {
 
