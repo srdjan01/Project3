@@ -6,7 +6,8 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
 var path = require("path");
-
+var Sequelize = require('sequelize');
+var mysql2 = require('mysql2')
 
 // Sets up the Express App
 // =============================================================
@@ -15,7 +16,7 @@ var PORT = process.env.PORT || 3000;
 
 
 // Requiring our models for syncing
-var db = require("./models/index.js");                //when inlcuding either of these lines, terminal reads "cannot find module sequalize"
+var db = require("./models/index.js");             //when inlcuding either of these lines, terminal reads "cannot find module sequalize"
 // var models = require('./models/sequelize');   
 
 // Static directory

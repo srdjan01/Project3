@@ -12,6 +12,7 @@ var db = require("../models");
 // =============================================================
 module.exports = function(app) {
 
+
   // GET route for getting all of the posts
   app.get("/api/posts/", function(req, res) {
     db.Post.findAll({})
@@ -19,6 +20,7 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
 
   // Get route for returning posts of a specific category
   app.get("/api/posts/category/:category", function(req, res) {
@@ -32,6 +34,7 @@ module.exports = function(app) {
     });
   });
 
+
   // Get rotue for retrieving a single post
   app.get("/api/posts/:id", function(req, res) {
     db.Post.findOne({
@@ -43,6 +46,7 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
 
   // POST route for saving a new post
   app.post("/api/posts", function(req, res) {
@@ -57,6 +61,7 @@ module.exports = function(app) {
     });
   });
 
+
   // DELETE route for deleting posts
   app.delete("/api/posts/:id", function(req, res) {
     db.Post.destroy({
@@ -68,6 +73,7 @@ module.exports = function(app) {
       res.json(dbPost);
     });
   });
+
 
   // PUT route for updating posts
   app.put("/api/posts", function(req, res) {
